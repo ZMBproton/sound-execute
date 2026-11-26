@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1792</width>
+    <height>1182</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>sound.execute();</string>
+  </property>
+  <property name="windowIcon">
+   <iconset theme="QIcon::ThemeIcon::AudioCard"/>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+
+
+QWidget {
+    background-color: #101117;
+    color: #E0E0E5;
+    font-family: &quot;JetBrains Mono&quot;;
+
+}
+
+
+QLabel {
+    background-color: transparent;
+    color: #9295A6;
+}
+
+QPushButton, QToolButton {
+    background-color: #1B1D28;
+    color: #B5C8F7;
+    border: 1px solid #303445;
+    border-radius: 6px;
+    padding: 7px 12px;
+}
+
+QPushButton:hover, QToolButton:hover {
+    background-color: #292D3E;
+    border-color: #B5C8F7;
+}
+
+QPushButton:pressed, QToolButton:pressed {
+    background-color: #343B50;
+}
+
+QPushButton:checked, QToolButton:checked {
+    background-color: #303B32;
+    color: #C5E2B7;
+    border-color: #C5E2B7;
+}
+
+QPushButton:disabled {
+    background-color: #161822;
+    color: #555969;
+    border-color: #252835;
+}
+
+
+QListWidget, QTreeWidget, QTableWidget {
+    background-color: #161822;
+    alternate-background-color: #1B1D28;
+    border: 1px solid #303445;
+    border-radius: 8px;
+    padding: 5px;
+    outline: none;
+    selection-background-color: #2A3145;
+    selection-color: #B5C8F7;
+}
+
+
+QListWidget {
+    background-color: #171A24;
+    color: #DCE2F0;
+    border: 1px solid #303749;
+    border-radius: 6px;
+    padding: 5px;
+    outline: none;
+}
+
+QListWidget::item {
+    padding: 8px 10px;
+    margin: 1px 0;
+    border-radius: 4px;
+}
+
+QListWidget::item:hover {
+    background-color: #292F40;
+}
+
+QListWidget::item:selected {
+    background-color: #344766;
+    color: #FFFFFF;
+}
+
+
+QLineEdit {
+    background-color: #1B1D28;
+    color: #E0E0E5;
+    border: 1px solid #303445;
+    border-radius: 6px;
+    padding: 8px 10px;
+    selection-background-color: #B5C8F7;
+    selection-color: #101117;
+}
+
+QLineEdit:focus {
+    border-color: #B5C8F7;
+}
+
+
+QSlider::groove:horizontal {
+    background-color: #303445;
+    height: 5px;
+    border-radius: 2px;
+}
+
+QSlider::sub-page:horizontal {
+    background-color: #B5C8F7;
+    border-radius: 2px;
+}
+
+QSlider::add-page:horizontal {
+    background-color: #303445;
+    border-radius: 2px;
+}
+
+QSlider::handle:horizontal {
+    background-color: #B5C8F7;
+    width: 12px;
+    margin: -4px 0px;
+    border-radius: 6px;
+}
+
+QSlider::handle:horizontal:hover {
+    background-color: #E0E0E5;
+}
+
+
+QComboBox, QSpinBox, QDoubleSpinBox {
+    background-color: #1B1D28;
+    color: #B5C8F7;
+    border: 1px solid #303445;
+    border-radius: 5px;
+    padding: 6px;
+}
+
+QComboBox:hover {
+    border-color: #B5C8F7;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #1B1D28;
+    color: #E0E0E5;
+    selection-background-color: #2A3145;
+    selection-color: #B5C8F7;
+}
+
+
+QScrollBar:vertical {
+    background-color: #161822;
+    width: 8px;
+    margin: 0px;
+}
+
+QScrollBar::handle:vertical {
+    background-color: #44495C;
+    min-height: 25px;
+    border-radius: 4px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background-color: #9295A6;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical {
+    background: transparent;
+}
+
+QScrollBar:horizontal {
+    background-color: #161822;
+    height: 8px;
+    margin: 0px;
+}
+
+QScrollBar::handle:horizontal {
+    background-color: #44495C;
+    min-width: 25px;
+    border-radius: 4px;
+}
+
+QScrollBar::add-line:horizontal,
+QScrollBar::sub-line:horizontal {
+    width: 0px;
+}
+
+
+QMenuBar {
+    background-color: #101117;
+    color: #B5C8F7;
+    border-bottom: 1px solid #303445;
+}
+
+QMenuBar::item {
+    padding: 7px 12px;
+    background: transparent;
+}
+
+QMenuBar::item:selected {
+    background-color: #292D3E;
+}
+
+
+QMenu {
+    background-color: #1B1D28;
+    color: #E0E0E5;
+    border: 1px solid #303445;
+    padding: 5px;
+}
+
+QMenu::item {
+    padding: 7px 20px;
+    border-radius: 4px;
+}
+
+QMenu::item:selected {
+    background-color: #2A3145;
+    color: #B5C8F7;
+}
+
+
+QToolBar {
+    background-color: #101117;
+    border: none;
+    spacing: 6px;
+    padding: 4px;
+}
+
+
+QStatusBar {
+    background-color: #101117;
+    color: #C5E2B7;
+    border-top: 1px solid #303445;
+    font-size: 9pt;
+}
+
+QToolTip {
+    background-color: #292D3E;
+    color: #E0E0E5;
+    border: 1px solid #44495C;
+    padding: 5px;
+}
+
+QSplitter::handle {
+    background-color: #303445;
+}
+
+QSplitter::handle:horizontal {
+    width: 2px;
+}
+
+QSplitter::handle:vertical {
+    height: 2px;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_6" stretch="0,0,0">
+    <property name="spacing">
+     <number>8</number>
+    </property>
+    <property name="leftMargin">
+     <number>10</number>
+    </property>
+    <property name="topMargin">
+     <number>10</number>
+    </property>
+    <property name="rightMargin">
+     <number>10</number>
+    </property>
+    <property name="bottomMargin">
+     <number>10</number>
+    </property>
+    <item>
+     <layout class="QHBoxLayout" name="topToolBar">
+      <item>
+       <widget class="QPushButton" name="openButton">
+        <property name="text">
+         <string>Open File</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resources.qrc">
+          <normaloff>:/icons/file-plus-corner.svg</normaloff>:/icons/file-plus-corner.svg</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>16</width>
+          <height>16</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="importFolderButton">
+        <property name="text">
+         <string>Import Folder</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resources.qrc">
+          <normaloff>:/icons/folder-plus-corner.svg</normaloff>:/icons/folder-plus-corner.svg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="addToPlaylistButton">
+        <property name="text">
+         <string>Add To Playlist</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="newPlaylistButton">
+        <property name="text">
+         <string>New Playlist</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="playPlaylistButton">
+        <property name="text">
+         <string>Play Playlist</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QSplitter" name="mainSplitter">
+      <property name="orientation">
+       <enum>Qt::Orientation::Horizontal</enum>
+      </property>
+      <widget class="QWidget" name="playlistPanel_2" native="true">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>Playlists</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QListWidget" name="playlistList"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>Playlist tracks</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QListWidget" name="playlistTracksList">
+          <property name="sortingEnabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="libraryPanel" native="true">
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QLabel" name="label_5">
+          <property name="text">
+           <string>Audio Library</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="searchEdit">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="placeholderText">
+           <string>Search library...</string>
+          </property>
+          <property name="clearButtonEnabled">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QListWidget" name="libraryList"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="queuePanel" native="true">
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLabel" name="label_6">
+          <property name="font">
+           <font>
+            <family>JetBrains Mono</family>
+            <pointsize>11</pointsize>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Queue</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QListWidget" name="queueList">
+          <property name="sortingEnabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="playbackPanel" native="true">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>180</height>
+       </size>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <layout class="QHBoxLayout" name="topRow" stretch="1,0,1">
+         <item>
+          <widget class="QWidget" name="trackInfoWidget" native="true">
+           <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="0">
+            <item>
+             <widget class="QLabel" name="fileLabel">
+              <property name="font">
+               <font>
+                <family>JetBrains Mono</family>
+                <pointsize>20</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>No track selected</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QWidget" name="controlsWidget" native="true">
+           <layout class="QHBoxLayout" name="horizontalLayout_7">
+            <property name="spacing">
+             <number>8</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QToolButton" name="shuffleOn">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="resources.qrc">
+                <normaloff>:/icons/shuffle.svg</normaloff>:/icons/shuffle.svg</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>24</width>
+                <height>24</height>
+               </size>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="previousButton_2">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="resources.qrc">
+                <normaloff>:/icons/skip-back.svg</normaloff>:/icons/skip-back.svg</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>24</width>
+                <height>24</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="playButton_2">
+              <property name="toolTip">
+               <string>Play button</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="resources.qrc">
+                <normaloff>:/icons/play.svg</normaloff>:/icons/play.svg</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>24</width>
+                <height>24</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="nextButton_2">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="resources.qrc">
+                <normaloff>:/icons/skip-forward.svg</normaloff>:/icons/skip-forward.svg</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>24</width>
+                <height>24</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="loopOn">
+              <property name="text">
+               <string>...</string>
+              </property>
+              <property name="icon">
+               <iconset resource="resources.qrc">
+                <normaloff>:/icons/repeat.svg</normaloff>:/icons/repeat.svg</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>24</width>
+                <height>24</height>
+               </size>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QWidget" name="settingWidget" native="true">
+           <layout class="QGridLayout" name="gridLayout_2">
+            <item row="0" column="1" rowspan="2">
+             <widget class="QWidget" name="settingsControlWidget" native="true">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>180</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>210</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <layout class="QGridLayout" name="gridLayout">
+               <item row="1" column="1">
+                <widget class="QSlider" name="tempoSlider">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>130</width>
+                   <height>22</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>180</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="orientation">
+                  <enum>Qt::Orientation::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QLabel" name="label">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="pixmap">
+                  <pixmap resource="resources.qrc">:/icons/volume-2.svg</pixmap>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QSlider" name="volumeSlider">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>130</width>
+                   <height>22</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>180</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="orientation">
+                  <enum>Qt::Orientation::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_2">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="pixmap">
+                  <pixmap resource="resources.qrc">:/icons/circle-speed-lines.svg</pixmap>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <spacer name="horizontalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Orientation::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_6">
+         <item>
+          <widget class="QLabel" name="currentTimeLabel">
+           <property name="text">
+            <string>0:00</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSlider" name="progressSlider">
+           <property name="maximum">
+            <number>0</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Orientation::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="durationLabel">
+           <property name="text">
+            <string>0:00</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1792</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menusound_execute">
+    <property name="title">
+     <string>sound.execute();</string>
+    </property>
+   </widget>
+   <addaction name="menusound_execute"/>
+  </widget>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
